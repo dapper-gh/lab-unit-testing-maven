@@ -127,7 +127,7 @@ public class SampleMethods {
     int result = 0;
 
     for (int i = 0; i < ints.length; i++) {
-      result += result + i;
+      result += ints[i];
     } // for
 
     return result; } // result(int[])

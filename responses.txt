@@ -1,0 +1,4 @@
+2.b. test2 will fail with the message "Not yet implemented"
+2.c. That was wrong, since we didn't add the @Test annotation.
+
+4.f. the test itself is bad since we can't expect to handle integer overflows
