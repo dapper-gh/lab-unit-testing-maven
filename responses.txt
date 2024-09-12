@@ -2,3 +2,7 @@
 2.c. That was wrong, since we didn't add the @Test annotation.
 
 4.f. the test itself is bad since we can't expect to handle integer overflows
+
+--- Next lab ---
+
+1.a. It will go to the end of the program unless we set other breakpoints (which we didn't).

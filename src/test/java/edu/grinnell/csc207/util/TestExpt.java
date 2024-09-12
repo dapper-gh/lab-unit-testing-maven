@@ -18,6 +18,11 @@ public class TestExpt {
             assertEquals(expected, SampleMethods.expt(base, i), base + "^" + i + " should be " + expected);
         }
     }
+
+    @Test
+    void test1K() {
+        assertEquals(1024, SampleMethods.expt(2, 10), "1K");
+    }
     
     @Test
     void testBase2() {

@@ -16,7 +16,7 @@ public class SampleMethodsExperiments {
    */
   public static void main(String[] args) {
     PrintWriter pen = new PrintWriter(System.out, true);
-    removeAsExperiments(pen);
+    exptExperiments(pen);
     pen.close();
   } // main()
 
@@ -51,4 +51,20 @@ public class SampleMethodsExperiments {
     String tmp = SampleMethods.removeAs(str);
     pen.println("\"" + tmp + "\"");
   } // removeAsExperiment(PrintWriter, String)
+
+    /**
+   * Some quick experiments with the expt method.
+   */
+  public static void exptExperiments(PrintWriter pen) {
+    exptExperiment(pen, 2, 10);
+  } // exptExperiments(PrintWriter)
+
+  /** 
+   * One quick experiment with the expt method.
+   */
+  public static void exptExperiment(PrintWriter pen, int base, int exponent) {
+    pen.print(base + "^" + exponent + " = ");
+    pen.flush();
+    pen.println(SampleMethods.expt(base, exponent));
+  } // exptExperiment(String[])
 } // class SampleMethodsExperiment

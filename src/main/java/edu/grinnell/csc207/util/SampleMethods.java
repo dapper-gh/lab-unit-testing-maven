@@ -40,7 +40,7 @@ public class SampleMethods {
       return tmp * tmp;
     } else {
       // Recursive case: When p is odd, result is x*(x^(p-1))
-      return expt(x * x, (p - 1) / 2);
+      return x * expt(x, p - 1);
     } // if p is odd.
   } // expt(int,int)
 
@@ -64,7 +64,7 @@ public class SampleMethods {
       return tmp * tmp;
     } else {
       // Recursive case: When p is odd, result is x*(x^(p-1))
-      return expt(x * x, (p - 1) / 2);
+      return x * expt(x, p - 1);
     } // if p is odd
   } // expt(double,int)
 
@@ -84,8 +84,8 @@ public class SampleMethods {
     String noAs = ""; // The string we're creating with no a's.
 
     for (int i = 0; i < str.length(); i++) {
-      if (str.charAt(i) == 'a') {
-        noAs += str.charAt(i++);
+      if (str.charAt(i) != 'a') {
+        noAs += str.charAt(i);
       } // if we see the a
     } // for each position
 
@@ -106,10 +106,12 @@ public class SampleMethods {
    */
   public static String removeBs(String str) {
     StringBuffer noBs = new StringBuffer(str);
-    for (int i = 0; i < str.length(); i++) {
-      if (noBs.charAt(i) == 'b') {
+    for (int i = 0; i < noBs.length();) {
+      if (noBs.charAt(i) == 'b') { // if the char at position i is a 'b'
         noBs.deleteCharAt(i);
-      } // if the char at position i is a 'b'
+      } else {
+        i++;
+      }
     } // for each position in the string
 
     return noBs.toString();
